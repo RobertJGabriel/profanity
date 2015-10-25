@@ -5,7 +5,9 @@
   "main": "test.js",
   "dependencies": {
     "chalk": "^1.1.1",
-    "request": "^2.65.0"
+    "request": "^2.65.0",
+    "sanitize-html": "^1.11.1",
+    "thesaurus": "0.0.0"
   },
   "devDependencies": {},
   "scripts": {
