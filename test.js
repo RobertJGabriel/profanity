@@ -9,6 +9,7 @@ var stdin = process.openStdin();
 var wasThereList = [];
 var thesaurusList = [];
 var words = [];
+var percent = 0;
 
 printWelcome();
 
@@ -97,6 +98,9 @@ function print() {
     console.log(chalk.underline.green("Amount of Words : ") + chalk.red(words.length) + "\n");
     console.log(chalk.underline.green("Thesaurus Count : ") + chalk.red(thesaurusList.length) + "\n");
     console.log(chalk.underline.green("Banned Count : ") + chalk.red(wasThereList.length) + "\n");
+    percent = (100 / words.length) *  wasThereList.length;
+    console.log(percent);
+    
 }
 
 function badWord(word) {
