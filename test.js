@@ -74,6 +74,11 @@ function print() {
 	printWelcome();
 }
 
+function maths(){
+    
+    
+}
+
 function makeCall() {
 	request({
 		uri: "http://www.reddit.com",
