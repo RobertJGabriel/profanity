@@ -4,13 +4,12 @@ var sanitizeHtml = require('sanitize-html');
 var thesaurus = require("thesaurus");
 var util = require('util');
 var async = require('async');
+
 var stdin = process.openStdin();
+
 var wasThereList = [];
 var thesaurusList = [];
 var words = [];
-var thesaurusCount = 0;
-var wordsCount = 0;
-
 
 printWelcome();
 
@@ -18,7 +17,7 @@ printWelcome();
 stdin.addListener("data", function(d) {
 	switch (d.toString().trim()) {
         case "1":
-			test();
+			tests();
 			break;
 		case "2":
 			makeCall("http://sexetc.org/");
@@ -39,14 +38,52 @@ stdin.addListener("data", function(d) {
 });
 
 
+function tests(){
+
+// an example using an object instead of an array
+async.parallel({
+    one: function(callback){
+        setTimeout(function(){
+            callback(null, "ss");
+      
+        }, 200);
+    },
+    two: function(callback){
+        setTimeout(function(){
+            callback(null, "ss");
+             	makeCall("http://sexetc.org/");
+        }, 3600);
+    }
+    ,
+   three: function(callback){
+        setTimeout(function(){
+            callback(null, "ss");
+          thesaures2("sex");
+        }, 4500);
+    },
+    
+       four: function(callback){
+        setTimeout(function(){
+            callback(null, "ss");
+          compareStatus();
+        }, 6600);
+    }
+    
+},
+function(err, results) {
+ setTimeout(function(){
+        print();
+        }, 7600);
+});
+}
+
 function compareStatus() {
 	for (var i = 0; i < words.length; i++) {
 		console.log(chalk.green.bold(words[i]) + "\n" );
-badWord(words[i]);
-	
-	}
+            badWord(words[i]);
+    }
 	print();
-	printWelcome();
+
 
 }
 
@@ -59,12 +96,11 @@ function printWelcome() {
 function thesaures2(word) {
 	console.log("thesaures \n");
 	thesaurusList = thesaurus.find(word);
-	thesaurusCount = thesaurusList.length;
 }
 
 function print() {
 	console.log(" Words on Website:\n" + words + "\nThesaurus Words:" + thesaurusList +
-		"\n Amount of Words:" + wordsCount + "\nThesaurus count:" + thesaurusCount + "\nBad word : \n " +
+		"\n Amount of Words:" + words.length + "\nThesaurus count:" + thesaurusList.length + "\nBad word : \n " +
 		wasThereList);
 }
 
@@ -77,8 +113,8 @@ function badWord(word) {
 
 		if (obj.response === "true") {
 
-			wasThereList.push(word);
-	console.log(chalk.red(word));
+            wasThereList.push(word);
+	       console.log(chalk.red(word));
 		
 		}
 	});
@@ -93,8 +129,8 @@ function makeCall(urls) {
 		var test = removeJavascript.replace(/<(?:.|\n)*?>/gm, '');
 		var removespacing = test.replace(/\s\s+/g, ' ');
 		    words = removespacing.split(" ");
-		    wordsCount = words.length;
-		//console.log(words);
+		  
+		console.log(words);
 
 	});
 }
