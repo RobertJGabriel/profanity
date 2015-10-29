@@ -1,8 +1,8 @@
 {
-  "name": "robin-tests",
+  "name": "profanity",
   "version": "1.0.0",
-  "description": "Tests for running the flitering system.",
-  "main": "test.js",
+  "description": "Profanity rates and reviews the text on a website, to see if its suitable and giving the website a Profanity rating. It's speedy and generates a JSON responce with a profanity rating, percentage and all Profanity words ",
+  "main": "profanity.js",
   "dependencies": {
     "chalk": "^1.1.1",
     "request": "^2.65.0",
@@ -20,12 +20,13 @@
   "keywords": [
     "flitering",
     "system",
-    "robin"
+    "robin",
+      "profanity"
   ],
   "author": "Robert Gabriel",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Projectbird/robin-test/issues"
+    "url": "https://github.com/Projectbird/profanity/issues"
   },
-  "homepage": "https://github.com/Projectbird/robin-test#readme"
+  "homepage": "https://github.com/Projectbird/profanity#readme"
 }
