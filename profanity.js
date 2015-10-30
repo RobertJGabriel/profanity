@@ -6,15 +6,15 @@ module.exports = function(word, callback) {
   }, function(error, response, body) {
       if(error){
           console.log('erro');
-          callback(error);
+          callback("hi",error);
           return;
       }
         if (typeof(callback) === 'function') {
 console.log('sss');
 return         callback(null,obj.response);
-}else{
+}
     console.log('emd');
     return "batman";
-}
+
   });
 }
