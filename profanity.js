@@ -8,12 +8,8 @@ module.exports = function(word, callback) {
           callback(error);
           return;
       }
-        if (typeof(callback) === 'function') {
-  callback(null,obj.response);
-          return;
-}else{
-    
-    return "batman";
-}
+
+      obj = JSON.parse(body);
+      callback(null, obj.response);
   });
 }
