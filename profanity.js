@@ -18,6 +18,6 @@ module.exports = function(word) {
 			});
 		}
 	], function(err, result) {
-		console.log(result);
+		return result;
 	});
 };
