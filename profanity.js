@@ -1,17 +1,13 @@
-var request = require("request");
-var chalk = require('chalk');
+// greetings.js
+// var exports = module.exports = {};
 
-module.exports = function(word, callback) {
-  request({
-      uri: "http://www.wdyl.com/profanity?q=" + encodeURI(word),
-      async: true,
-  }, function(error, response, body) {
-      if(error){
-          callback(error);
-          return;
-      }
+exports.sayHelloInEnglish = function() {
+  return "HELLO";
+};
 
-      obj = JSON.parse(body);
-      return obj.response;
-  });
-}
+exports.sayHelloInSpanish = function() {
+  return "Hola";
+};
+
+
+module.exports = "Bonjour";

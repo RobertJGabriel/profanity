@@ -1,3 +1,12 @@
-var profanity = require("profanity");
-var test = profanity("sex");
-console.log("j" + test);
+var greetings = require("profanity");
+/*
+ * TypeError: object Bonjour has no 
+ * method 'sayHelloInEnglish'
+ */
+greetings.sayHelloInEnglish();
+        
+/* 
+ * TypeError: object Bonjour has no 
+ * method 'sayHelloInSpanish'
+ */
+greetings.sayHelloInSpanish();
