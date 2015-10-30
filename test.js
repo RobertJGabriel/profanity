@@ -1,3 +1,3 @@
 var profanity = require("profanity");
-
-console.log("j" + profanity("sex"));
+var test = profanity("sex");
+console.log("j" + test);
