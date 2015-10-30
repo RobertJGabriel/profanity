@@ -9,5 +9,8 @@ exports.sayHelloInSpanish = function() {
   return "Hola";
 };
 
-
+/* 
+ * this line of code re-assigns  
+ * module.exports
+ */
 module.exports = "Bonjour";
