@@ -5,11 +5,16 @@ module.exports = function(word, callback) {
       async: true,
   }, function(error, response, body) {
       if(error){
+          console.log('erro');
           callback(error);
           return;
       }
-
-      obj = JSON.parse(body);
-      callback(null, obj.response);
+        if (typeof(callback) === 'function') {
+console.log('sss');
+return         callback(null,obj.response);
+}else{
+    console.log('emd');
+    return "batman";
+}
   });
 }
