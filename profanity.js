@@ -1,16 +1,18 @@
-// greetings.js
-// var exports = module.exports = {};
+var request = require("request"); 
+var chalk = require('chalk');
 
-exports.sayHelloInEnglish = function() {
-  return "HELLO";
-};
 
-exports.sayHelloInSpanish = function() {
-  return "Hola";
-};
+module.exports = function(word, callback) {
+  request({
+      uri: "http://www.wdyl.com/profanity?q=" + encodeURI(word),
+      async: true,
+  }, function(error, response, body) {
+      if(error){
+          callback(error);
+          return;
+      }
 
-/* 
- * this line of code re-assigns  
- * module.exports
- */
-module.exports = "Bonjour";
+      obj = JSON.parse(body);
+      callback(null, obj.response);
+  });
+}
