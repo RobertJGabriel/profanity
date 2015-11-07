@@ -8,6 +8,7 @@ console.log(chalk.red("Please enter a word"));
 stdin.addListener("data", function (d) {
     console.log("you entered: " + d.toString().trim() + "");
     runTest(d.toString().trim());
+
 });
 
 function runTest(word) {
@@ -18,6 +19,7 @@ function runTest(word) {
         } else {
             console.log(chalk.red(response));
         }
+        process.exit();
     });
 
 }
