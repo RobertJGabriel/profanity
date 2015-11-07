@@ -12,7 +12,19 @@ $ npm install --save profanity
 ## Usage
 
 ```js
-console.log('coming soon');
+var profanity = require("./profanity.js");
+var chalk = require('chalk');
+
+
+
+    profanity("sex", function (response) {
+        if (response === "false") {
+            console.log(chalk.blue(response));
+        } else {
+            console.log(chalk.red(response));
+        }
+    });
+
 ```
 
 ## Team
