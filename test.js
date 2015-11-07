@@ -1,4 +1,4 @@
-var greetings = require("./profanity.js");
+var profanity = require("./profanity.js");
 var chalk = require('chalk');
 
 /*
@@ -18,7 +18,7 @@ for (var i = 0; i < words.length; i++) {
 
 function runTest(word) {
 
-    greetings(word, function (response) {
+    profanity(word, function (response) {
         if (response === "false") {
             console.log(chalk.blue(response));
         } else {
