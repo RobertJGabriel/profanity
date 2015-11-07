@@ -1,7 +1,4 @@
 var request = require("request");
-var chalk = require('chalk');
-var async = require('async');
-
 
 
 module.exports = function (word, callback) {
