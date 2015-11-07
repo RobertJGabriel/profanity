@@ -1,20 +1,14 @@
 var profanity = require("./profanity.js");
 var chalk = require('chalk');
-
-/*
- * TypeError: object Bonjour has no 
- * method 'sayHelloInEnglish'
- */
-
-var words = ["batman"]
+var stdin = process.openStdin();
 
 
-// Fill it with numbers using a for-loop
-for (var i = 0; i < words.length; i++) {
+console.log(chalk.red("Please enter a word"));
 
-    runTest(words[i]);
-};
-
+stdin.addListener("data", function (d) {
+    console.log("you entered: " + d.toString().trim() + "");
+    runTest(d.toString().trim());
+});
 
 function runTest(word) {
 
