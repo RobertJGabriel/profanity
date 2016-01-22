@@ -1,6 +1,6 @@
 
 
-Profanity rates and reviews text, to see if its suitable. Enter a word and it will simply return a value of true or false, depending on whether or not the word is classed as profanity.
+Profanity rates and reviews text, to see if its suitable. Enter a word and it will simply return a value of true or false, depending on whether or not the word is classed as profanity. Based off googles profanity check.
 
 
 ## Install
