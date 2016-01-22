@@ -1,6 +1,6 @@
 
 
-Profanity rates and reviews the text on a website, to see if its suitable and giving the website a Profanity rating. It's speedy and generates a JSON responce with a profanity rating, percentage and all Profanity words .
+Profanity rates and reviews text, to see if its suitable. Enter a word and it will simply return a value of true or false, depending on whether or not the word is classed as profanity.
 
 
 ## Install
