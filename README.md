@@ -15,8 +15,6 @@ $ npm install --save profanity
 var profanity = require("./profanity.js");
 var chalk = require('chalk');
 
-
-
     profanity("sex", function (response) {
         if (response === "false") {
             console.log(chalk.blue(response));

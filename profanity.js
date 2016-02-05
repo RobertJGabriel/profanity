@@ -10,7 +10,6 @@ module.exports = function (word, callback) {
             callback(error);
             return;
         }
-
         obj = JSON.parse(body);
         callback(obj.response);
     });
